@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <!-- Bundles de la aplicación -->
+        <f:loadBundle basename="resources.constants" var="constants"></f:loadBundle>
+        <f:loadBundle basename="resources.mensajes" var="msg"></f:loadBundle>
+        <!-- Styles de la aplicación -->
+        <link  rel="stylesheet" type="text/css" href="./styles/global.css"></link>
+        <title><h:outputText value="#{constants['app_name']}"></h:outputText></title>
+    </h:head>
+    <h:body>
+        <h1>Hello from Facelets</h1>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h:form>
+            <h:outputLabel value="#{msg['app_nombre']}" for="nombre" />
+            <h:inputText value="#{contacto.nombreEstudiante}" id="nombre" />
+            <h:outputLabel value="#{msg['app_DNI']}" for="dni" />
+            <h:inputText value="#{contacto.DNIEstudiante}" id="dni" />
+            
+            <h:commandButton value="#{msg['app_saludo']}" />
+            <h:outputText value="#{contacto.saludo}" />
+        </h:form>
+    </h:body>
+</html>
+
