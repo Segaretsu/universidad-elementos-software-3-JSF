@@ -23,7 +23,8 @@
             <h:inputText value="#{contacto.DNIEstudiante}" id="dni" />
             
             <h:commandButton value="#{msg['app_saludo']}" />
-            <h:outputText value="#{contacto.saludo}" />
+            <h:outputText value="#{contacto.saludo}"
+                          rendered="#{contacto.nombreEstudiante ne null}" />
         </h:form>
     </h:body>
 </html>
